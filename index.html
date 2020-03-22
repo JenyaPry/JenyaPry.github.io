@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>Jenya Pryadkin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  p {
+    display: block;
+    width: 1100px;
+    margin-top: 1.75em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+   {
+    display: block;
+    width: 1100px;
+    margin-top: 1.75em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .btn {
+    border: none;
+    background-color: light gray;
+    padding: 7px 14px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  .Resume:hover {
+      background-color: #C5DB38;
+      color: white;}
+
+</style>
+<body>
+  <div class="w3-container">
+    <div class="prof">
+
+    <div class="w3-row">
+      <a href="javascript:void(0)" onclick="openevent(event, 'About');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">About</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openevent(event, 'Projects');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Projects</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openevent(event, 'Contact');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Contact</div>
+      </a>
+    </div>
+
+    <div id="About" class="w3-container event">
+        <img src="JP.jpg" class="prof-img" style="width:240px; height:300px;" align="left";
+        hspace = "100"; vspace="30">
+        <p> Howdy. I'm a second year Undergraduate student at UC Berkeley majoring in Engineering Physics and EECS. My interests include rocketry, radio (callsign KG5JXW), and electronic design. My skill set ranges from mechanical design to allow for project development: CAD, physical manufacturing/machining, 3D Printing; to more specific interests in electronics: circuit design, embedded systems, and antenna design/Radio electronics. Specifically, I hope to apply these skills and interest in the Aerospace Industry. My planned graduation date is Spring 2022. Click below to download my Resume. </p>
+
+        <button class="btn Resume" align = "center"> Resume </button>
+    </div>
+
+    <div id="Projects" class="w3-container event" style="display:none">
+      <h2>Projects</h2>
+      <h3>Space Technologies And Rocketry (Cal STAR): </h3>
+
+      <div class="w3-dropdown-hover"><img src="AB.jpg" style="width:1200px; height:350px;" align="left"; margin = auto>
+        <div class="w3-dropdown-content w3-hover-lime" style="width:600px">
+          <a>Air Bears (Fall 2019 Rocket) <br> This rocket pioneered the dual-deploy structure applied in the full scale Bear Force One Rocket we plan to fly in the Spaceport America Cup (IREC). Airbears was launched twice, once at baseline with a L1250 motor, and once with a 9 lb payload at transonic range on an L1150 motor to simulate IREC conditions.</a>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="w3-dropdown-hover"><img src="BF1.jpg" style="width:1200px; height:350px;" align="left"; margin = auto>
+        <div class="w3-dropdown-content w3-hover-lime" style="width:600px">
+          <a> In Progress! </a>
+          <a> Bear Force One (Spring 2020 Rocket) <br> This rocket is designed to spec for the 10,000 ft apogee COTS division of the Intercollegiate Rocketry Engineering Competition (IREC). It has a fiberglass airframe, dual deployment recovery, and carries an 8.8 lb payload.</a>
+        </div>
+      </div>
+
+      <h3>High Power Rocketry Certifications:</h3>
+      <h3>Voice-Controlled Robotic Car:</h3>
+      <h3>Amateur Radio:</h3>
+        <p>Read about further escapades here: <a href="https://www.qrz.com/db/KG5JXW">https://www.qrz.com/db/KG5JXW </p>
+    </div>
+
+    <div id="Contact" class="w3-container event" style="display:none">
+      <h2>Contact me at:</h2>
+      <a href= mailto:jenya@berkeley.edu?> Jenya@berkeley.edu </a>
+      <br>
+      <a href= mailto:jpryadkin@gmail.com?> jpryadkin@gmail.com </a>
+    </div>
+  </div>
+
+  </div>
+
+  <script>
+  function openevent(evt, eventName) {
+    var i, x, tablinks;
+
+    x = document.getElementsByClassName("event");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-border-lime", "");
+    }
+    document.getElementById(eventName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-border-lime";
+  }
+  </script>
+
+</body>
+</html>
